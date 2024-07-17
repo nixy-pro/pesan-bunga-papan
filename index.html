@@ -65,26 +65,18 @@
             top: 0;
         }
     </style>
-    <link rel="shortcut icon" href="https://www.alyssaflorist.com/ico.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="content">
-        <h1 id="pageTitle">Toko Bunga Alyssa Florist</h1>
+        <h1>Pesan Bunga Papan - Alyssa Florist</h1>
         <p id="typingText1"></p>
         <p id="typingText2"></p>
         <p id="typingText3"></p>
-        <button id="visitStore" onclick="animateButton()">Kunjungi Toko</button>
+        <button id="visitStore" onclick="window.location.href='http://www.alyssaflorist.com';">Kunjungi Toko</button>
     </div>
 
     <script>
-        function animateButton() {
-            var button = document.getElementById('visitStore');
-            button.classList.add('clicked');
-            setTimeout(function() {
-                button.classList.remove('clicked');
-            }, 500);
-        }
-
         // Animasi teks mengetik
         var pageTitle = document.getElementById('pageTitle');
         var titleText = pageTitle.textContent;
