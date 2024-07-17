@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesan Bunga Papan - Alyssa Florist</title>
     <meta name="description" content="Pesan bunga papan terbaik di Cianjur dari Alyssa Florist. Kualitas bunga segar dan layanan terbaik untuk setiap acara.">
-    <meta name="keywords" content="pesan bunga papan, Alyssa Florist, toko bunga Cianjur, bunga segar, layanan bunga, papan bunga">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,12 +16,6 @@
             align-items: center;
             height: 100vh;
             text-align: center;
-        }
-        header {
-            background-color: #dc3545;
-            color: white;
-            padding: 20px;
-            font-size: 24px;
         }
         .content {
             max-width: 600px;
@@ -72,16 +65,14 @@
             top: 0;
         }
     </style>
+    <link rel="shortcut icon" href="https://www.alyssaflorist.com/ico.png" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <h1>Toko bunga</h1>
-      <h1>Alyssa Florist</h1>
-    </header>
     <div class="content">
-        <p>Pesan bunga papan terbaik di Cianjur dari Alyssa Florist. Kami menawarkan bunga segar dan layanan terbaik untuk setiap acara Anda.</p>
-        <p>Hubungi kami untuk pemesanan dan informasi lebih lanjut.</p>
-        <p>Alamat: Jl. Contoh No. 123, Cianjur, Jawa Barat</p>
+        <h1 id="pageTitle">Toko Alyssa Florist</h1>
+        <p id="typingText1"></p>
+        <p id="typingText2"></p>
+        <p id="typingText3"></p>
         <button id="visitStore" onclick="animateButton()">Kunjungi Toko</button>
     </div>
 
@@ -93,6 +84,64 @@
                 button.classList.remove('clicked');
             }, 500);
         }
+
+        // Animasi teks mengetik
+        var pageTitle = document.getElementById('pageTitle');
+        var titleText = pageTitle.textContent;
+        pageTitle.textContent = '';
+        var index = 0;
+
+        function typeWriterTitle() {
+            if (index < titleText.length) {
+                pageTitle.textContent += titleText.charAt(index);
+                index++;
+                setTimeout(typeWriterTitle, 100);
+            }
+        }
+
+        typeWriterTitle();
+
+        var typingText1 = document.getElementById('typingText1');
+        var text1 = "Pesan bunga papan terbaik di Cianjur dari Alyssa Florist. ";
+        var index1 = 0;
+
+        function typeWriter1() {
+            if (index1 < text1.length) {
+                typingText1.textContent += text1.charAt(index1);
+                index1++;
+                setTimeout(typeWriter1, 50);
+            }
+        }
+
+        typeWriter1();
+
+        var typingText2 = document.getElementById('typingText2');
+        var text2 = "Kami menawarkan bunga segar dan layanan terbaik untuk setiap acara Anda.";
+        var index2 = 0;
+
+        function typeWriter2() {
+            if (index2 < text2.length) {
+                typingText2.textContent += text2.charAt(index2);
+                index2++;
+                setTimeout(typeWriter2, 50);
+            }
+        }
+
+        typeWriter2();
+
+        var typingText3 = document.getElementById('typingText3');
+        var text3 = "Hubungi kami untuk pemesanan dan informasi lebih lanjut.";
+        var index3 = 0;
+
+        function typeWriter3() {
+            if (index3 < text3.length) {
+                typingText3.textContent += text3.charAt(index3);
+                index3++;
+                setTimeout(typeWriter3, 50);
+            }
+        }
+
+        typeWriter3();
     </script>
 </body>
 </html>
