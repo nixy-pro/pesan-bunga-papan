@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Bunga Papan - Alyssa Florist</title>
+    <meta name="description" content="Pesan bunga papan terbaik di Cianjur dari Alyssa Florist. Kualitas bunga segar dan layanan terbaik untuk setiap acara.">
+    <meta name="keywords" content="pesan bunga papan, Alyssa Florist, toko bunga Cianjur, bunga segar, layanan bunga, papan bunga">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        header {
+            background-color: #dc3545;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .content {
+            max-width: 600px;
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        button {
+            background-color: #dc3545;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        button:hover {
+            transform: translateY(-5px);
+        }
+        button::before {
+            content: "";
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.4);
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: top 0.3s ease;
+        }
+        button:hover::before {
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Toko bunga</h1>
+      <h1>Alyssa Florist</h1>
+    </header>
+    <div class="content">
+        <p>Pesan bunga papan terbaik di Cianjur dari Alyssa Florist. Kami menawarkan bunga segar dan layanan terbaik untuk setiap acara Anda.</p>
+        <p>Hubungi kami untuk pemesanan dan informasi lebih lanjut.</p>
+        <p>Alamat: Jl. Contoh No. 123, Cianjur, Jawa Barat</p>
+        <button id="visitStore" onclick="animateButton()">Kunjungi Toko</button>
+    </div>
+
+    <script>
+        function animateButton() {
+            var button = document.getElementById('visitStore');
+            button.classList.add('clicked');
+            setTimeout(function() {
+                button.classList.remove('clicked');
+            }, 500);
+        }
+    </script>
+</body>
+</html>
